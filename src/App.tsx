@@ -20,6 +20,7 @@ import DonorDashboard from './components/dashboards/DonorDashboard';
 import ReceiverDashboard from './components/dashboards/ReceiverDashboard';
 import VolunteerDashboard from './components/dashboards/VolunteerDashboard';
 import AdminDashboard from './components/dashboards/AdminDashboard';
+import { N8nChatWidget } from './components/N8nChatWidget';
 
 function MainContent() {
   const { activeTab } = useApp();
@@ -56,6 +57,7 @@ function MainContent() {
       </main>
 
       <Footer />
+      <N8nChatWidget />
     </div>
   );
 }

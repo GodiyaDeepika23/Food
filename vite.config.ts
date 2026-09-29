@@ -17,6 +17,20 @@ export default defineConfig(() => {
       hmr: process.env.DISABLE_HMR !== 'true',
       // Disable file watching when DISABLE_HMR is true to save CPU during agent edits.
       watch: process.env.DISABLE_HMR === 'true' ? null : {},
+      proxy: {
+        '/api/n8n-chat': {
+          target: 'https://godiyadeepika.app.n8n.cloud',
+          changeOrigin: true,
+          secure: true,
+          rewrite: () => '/webhook/15c252a3-0ad0-405f-bc58-ee7ba4a2f74a/chat',
+        },
+        '/api/n8n-chat-test': {
+          target: 'https://godiyadeepika.app.n8n.cloud',
+          changeOrigin: true,
+          secure: true,
+          rewrite: () => '/webhook-test/15c252a3-0ad0-405f-bc58-ee7ba4a2f74a/chat',
+        },
+      },
     },
   };
 });
