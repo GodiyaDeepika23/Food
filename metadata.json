@@ -1,0 +1,7 @@
+{
+  "name": "ShareMeal",
+  "description": "A food donation platform that connects people who have surplus food with NGOs, volunteers, shelters, and people who need food.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
+
